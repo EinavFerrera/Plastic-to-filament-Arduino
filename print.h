@@ -5,6 +5,8 @@ extern int heater;
 extern int setTemp;
 extern int ref;
 extern int rotating_speed;
+extern int rpm;
+extern int steps;
 void print(){
 
  printCounter+=1;
@@ -18,8 +20,8 @@ void print(){
               Serial.print(",   Heater ON");
           Serial.print(",  Set temp =  ");
           Serial.print(setTemp);
-          Serial.print(",   Speed: ");
-          //Serial.println(speed);
-           Serial.println(rotating_speed);
+          Serial.print("  stepper RPM: "); 
+          Serial.println(rpm);
+        
         }
 }
